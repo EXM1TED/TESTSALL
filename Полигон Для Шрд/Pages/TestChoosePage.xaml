@@ -1,0 +1,55 @@
+﻿<Page x:Class="Полигон_Для_Шрд.Pages.TestChoosePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Полигон_Для_Шрд.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TestChoosePage">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 0 0 10">
+                    <Button Name="btnTestAboutPhysic" 
+                            Style="{StaticResource TaskWindowButtonTest}"
+                            Click="btnTestAboutPhysic_Click"
+                            Content="Тест 1"/>
+                    <Button Name="btnTest2"
+                            Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 2"/>
+                    <Button Name="btnTest3"
+                            Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 3"
+                            Click="btnTest3_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 0 0 10">
+                    <Button Style="{StaticResource TaskWindowButtonTest}" Content="Тест 4" Name="btnTest4"
+                            Click="btnTest4_Click"/>
+                    <Button Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 5" Name="btnTest5"
+                            Click="btnTest5_Click"/>
+                    <Button Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 6" Name="btnTest6"
+                            Click="btnTest6_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 0 0 10">
+                    <Button Style="{StaticResource TaskWindowButtonTest}" Content="Тест 7" Name="btnTest7"
+                            Click="btnTest7_Click"/>
+                    <Button Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 8" Name="btnTest8"
+                            Click="btnTest8_Click"/>
+                    <Button Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 9" Name="btnTest9"
+                            Click="btnTest9_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

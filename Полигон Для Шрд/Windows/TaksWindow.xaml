@@ -1,0 +1,43 @@
+﻿<Window x:Class="Полигон_Для_Шрд.Windows.TaksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
+        mc:Ignorable="d"
+        Title="TaksWindow" Height="800" Width="1600"
+        MinWidth="1200" MinHeight="600" MaxHeight="900" MaxWidth="1700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+            <TextBlock Text="Logo" Margin="10 0 0 0"
+               FontSize="64"/>
+            <Button Name="btnReturnTaskWindowToMainWindow" 
+            Content="Назад" Width="200" Margin="100 0 0 0"
+            Style="{StaticResource RoundButtonTemplate}"
+            FontSize="36" Click="btnReturnTaskWindowToMainWindow_Click"/>
+            <Button Content="Уроки" Margin="100 0 0 0"
+            Style="{StaticResource RoundButtonTemplate}"
+            Width="200"
+            FontSize="36"/>
+        </StackPanel>
+        <TextBlock Grid.Row="0" Grid.Column="1"
+           HorizontalAlignment="Right"
+           VerticalAlignment="Center"
+                   Margin="0 0 50 0">
+         <Hyperlink Name="NavigateToProfile" Click="NavigateToProfile_Click">
+        <TextBlock Text="{Binding Path=Login}"
+            FontSize="24" HorizontalAlignment="Right"/>
+            </Hyperlink>
+        </TextBlock>
+        <Frame
+               NavigationUIVisibility="Hidden"
+               Name="PageOfTests"
+               Grid.Row="1"/>
+    </Grid>
+</Window>

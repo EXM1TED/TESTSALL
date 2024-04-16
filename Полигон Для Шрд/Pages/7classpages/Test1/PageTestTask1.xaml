@@ -1,0 +1,61 @@
+﻿<Page x:Class="Полигон_Для_Шрд.Pages._7classpages.Test1.PageTestTask1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Полигон_Для_Шрд.Pages._7classpages.Test1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageTestTask1">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Задание №1"
+                   Style="{StaticResource TextBlockTestTaskNummber}"/>
+            <TextBlock
+            Name="textBlockTaskName"
+            Text="Какие виды явлений изучает физика?"
+                Style="{StaticResource TextBlockTestTask}"/>
+            <StackPanel Grid.Row="1"
+                        Grid.Column="1"
+                Orientation="Vertical"
+                VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical" Margin="0 0 50 0">
+                    <CheckBox Name="checkBoxMech" Content="Механические"
+                          Style="{StaticResource CheckBoxTest}"/>
+                    <CheckBox Content="Электрические"
+                          Name="checkBoxElectricity"
+                          Style="{StaticResource CheckBoxTest}"/>
+                    <CheckBox Content="Тепловые"
+                          Name="checkBoxThermo"
+                          Style="{StaticResource CheckBoxTest}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <CheckBox Content="Световые"
+                          Name="checkBoxLight"
+                          Style="{StaticResource CheckBoxTest}">
+                    </CheckBox>
+                    <CheckBox Content="Магнитные"
+                          Name="checkBoxMagnetic"
+                          Style="{StaticResource CheckBoxTest}"/>
+                    <CheckBox Content="Звуковые"
+                          Name="checkBoxAudio"
+                          Style="{StaticResource CheckBoxTest}"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
+                Content="Далее"
+                Click="btnNext_Click"/>
+    </Grid>
+</Page>
