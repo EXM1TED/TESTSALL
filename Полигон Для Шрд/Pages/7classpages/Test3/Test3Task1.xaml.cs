@@ -13,9 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Полигон_Для_Шрд.Classes;
-using Полигон_Для_Шрд.Pages._7classpages.Test1;
 using Полигон_Для_Шрд.Pages._7classpages.Test3;
-using Полигон_Для_Шрд.Classes;
 
 namespace Полигон_Для_Шрд.Pages._7classpages.Test3
 {
@@ -33,6 +31,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test3
             result.Result = 0;
             result.UserId = user.UserId;
             result.TestName = "Наблюдения, опыты, измерения, гипотеза, эксперимент";
+            result.TasksCount = 9;
             SaveResult.resultOfTest = result;
         }
 

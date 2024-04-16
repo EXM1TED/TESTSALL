@@ -33,11 +33,23 @@ namespace Полигон_Для_Шрд.Windows
             this.DataContext = user;
             ApplicationContext db = new ApplicationContext();
             db.Database.EnsureCreated();
-            var result = db.ResultsOfTest.Where(u => u.UserId == user.UserId).ToList();
+            var result = db.ResultsOfTest.Where(u => u.UserId == user.UserId && u.TasksCount > 0).ToList();
             foreach (var test in result)
             {
-                lstBoxOfCompleTest.Items.Add($"{test.TestName}, результат: {test.Result} из 8");
+                TextBlock txtBlockResult = new TextBlock();
+                if (test.Result < 5)
+                {
+                    txtBlockResult.Foreground = Brushes.Red;
+                }
+                else if(test.Result >= 5) 
+                {
+                    txtBlockResult.Foreground= Brushes.Green;
+                }
+                txtBlockResult.Text = $"{test.TestName}.\nРезультат: {test.Result} из {test.TasksCount}";
+                txtBlockResult.TextWrapping = TextWrapping.Wrap;
+                lstBoxOfCompleTest.Items.Add(txtBlockResult);
             }
+
         }
 
         private void MainMenu_Loaded(object sender, RoutedEventArgs e)

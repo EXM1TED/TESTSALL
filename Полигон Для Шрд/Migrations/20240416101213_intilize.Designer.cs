@@ -10,7 +10,7 @@ using Полигон_Для_Шрд.Classes;
 namespace Полигон_Для_Шрд.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240414193746_intilize")]
+    [Migration("20240416101213_intilize")]
     partial class intilize
     {
         /// <inheritdoc />
@@ -29,6 +29,10 @@ namespace Полигон_Для_Шрд.Migrations
                     b.Property<int>("Result")
                         .HasColumnType("INTEGER")
                         .HasColumnName("Result");
+
+                    b.Property<int>("TasksCount")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("Count_of_tasks");
 
                     b.Property<string>("TestName")
                         .IsRequired()

@@ -30,6 +30,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test6
             result.Result = 0;
             result.UserId = user.UserId;
             result.TestName = "Броуновское движение";
+            result.TasksCount = 8;
             SaveResult.resultOfTest = result;
         }
         private void btnNext_Click(object sender, RoutedEventArgs e)

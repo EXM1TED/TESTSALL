@@ -20,5 +20,7 @@ namespace Полигон_Для_Шрд.Classes
         public string TestName { get; set; }    
         [Column("Result")]
         public int Result { get; set; }
+        [Column("Count_of_tasks")]
+        public int TasksCount { get; set; }
     }
 }

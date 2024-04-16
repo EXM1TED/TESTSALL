@@ -27,6 +27,10 @@ namespace Полигон_Для_Шрд.Migrations
                         .HasColumnType("INTEGER")
                         .HasColumnName("Result");
 
+                    b.Property<int>("TasksCount")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("Count_of_tasks");
+
                     b.Property<string>("TestName")
                         .IsRequired()
                         .HasColumnType("TEXT")

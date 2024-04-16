@@ -14,7 +14,7 @@ namespace Полигон_Для_Шрд.Classes
         public DbSet<ResultOfTest> ResultsOfTest { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=DataStore.db");
+            optionsBuilder.UseSqlite("Data Source=DataBase.db");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

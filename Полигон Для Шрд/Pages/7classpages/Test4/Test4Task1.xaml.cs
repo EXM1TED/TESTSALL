@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Полигон_Для_Шрд.Classes;
-using Полигон_Для_Шрд.Pages._7classpages.Test3;
-using Полигон_Для_Шрд.Classes;
 namespace Полигон_Для_Шрд.Pages._7classpages.Test4
 {
     /// <summary>
@@ -31,6 +29,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test4
             result.Result = 0;
             result.UserId = user.UserId;
             result.TestName = "Цена деления шкалы и точность погрешности измерения";
+            result.TasksCount = 7;
             SaveResult.resultOfTest = result;
         }
 

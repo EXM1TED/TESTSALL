@@ -35,8 +35,9 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test4
             {
                 NavigationService.Navigate(new Test4Task6());
             }
-            if (checkBoxOb.IsChecked == true
-                && checkBoxMass.IsChecked == true)
+            if (checkBoxLength.IsChecked == true
+                && checkBoxVolunme.IsChecked == true
+                && checkBoxWeight.IsChecked == true)
             {
                 SaveResult.resultOfTest.Result++;
             }

@@ -36,7 +36,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test3
             var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Наблюдения, опыты, измерения, гипотеза, эксперимент").ToList();
             foreach (var test in results)
             {
-                txtBlockResult.Text = $"Ваш результат: {test.Result} из 9";
+                txtBlockResult.Text = $"Ваш результат: {test.Result} из {test.TasksCount}";
                 saveResultForImage = test.Result;
             }
             if (saveResultForImage < 5)

@@ -38,7 +38,7 @@ namespace Полигон_Для_Шрд.Pages
             var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Основы физики").ToList();
             foreach (var test in results)
             {
-                txtBlockResult.Text = $"Ваш результат: {test.Result} из 8";
+                txtBlockResult.Text = $"Ваш результат: {test.Result} из {test.TasksCount}";
                 saveResultForImage = test.Result;
             }
             if (saveResultForImage < 5) 

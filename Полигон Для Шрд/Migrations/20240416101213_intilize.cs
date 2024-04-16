@@ -18,7 +18,8 @@ namespace Полигон_Для_Шрд.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     User_Id = table.Column<int>(type: "INTEGER", nullable: false),
                     Name_of_test = table.Column<string>(type: "TEXT", nullable: false),
-                    Result = table.Column<int>(type: "INTEGER", nullable: false)
+                    Result = table.Column<int>(type: "INTEGER", nullable: false),
+                    Count_of_tasks = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

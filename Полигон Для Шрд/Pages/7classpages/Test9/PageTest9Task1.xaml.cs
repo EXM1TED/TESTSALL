@@ -30,6 +30,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test9
             result.Result = 0;
             result.UserId = user.UserId;
             result.TestName = "Состояние вещества";
+            result.TasksCount = 9;
             SaveResult.resultOfTest = result;
         }
         private void btnNext_Click(object sender, RoutedEventArgs e)

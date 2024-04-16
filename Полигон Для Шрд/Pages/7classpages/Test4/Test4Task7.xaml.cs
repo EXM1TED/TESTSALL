@@ -31,7 +31,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test4
             {
                 SaveResult.resultOfTest.Result++;
             }
-            NavigationService.Navigate(new TestCompletePage());
+            NavigationService.Navigate(new TestComplete4());
         }
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)

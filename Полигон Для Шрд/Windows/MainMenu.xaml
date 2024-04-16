@@ -43,14 +43,15 @@
             VerticalAlignment="Top">
             <StackPanel Grid.Row="1"
                         Grid.Column="0"
-                        Width="500"
+                        Width="Auto"
                         Margin="50 0 0 0"
                         Orientation="Vertical">
                 <Label Name="label" Content="Пройденные тесты:"
                        FontSize="28"/>
                 <ListBox   Name="lstBoxOfCompleTest"
                            Height="350"
-                           Width="500">
+                           FontSize="20"
+                           Padding="20 0 0 0">
                 </ListBox>
             </StackPanel>
         </StackPanel>

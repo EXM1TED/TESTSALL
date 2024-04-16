@@ -29,12 +29,26 @@
                  Orientation="Vertical"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center">
-            <RadioButton Content="Погрешность измерений может быть больше цены деления" FontSize="8"
-                         Style="{StaticResource radioButtonTest}"/>
-            <RadioButton Content="Абсолютно точных измерений не существует" FontSize="8"
-                         Style="{StaticResource radioButtonTest}"/>
-            <RadioButton Content="Цена деления прибора зависит от количества штрихов на шкале прибора" FontSize="8" Name="rdButtonCorrectAnswer"
-                         Style="{StaticResource radioButtonTest}"/>
+            <RadioButton
+                         Style="{StaticResource radioButtonTest}">
+                <TextBlock FontSize="8"
+                           TextWrapping="Wrap">
+                    Погрешность измерений может быть больше цены деления
+                </TextBlock>
+            </RadioButton>
+            <RadioButton FontSize="8"
+                         Style="{StaticResource radioButtonTest}">
+                <TextBlock TextWrapping="Wrap">
+                    Абсолютно точных измерений не существует
+                </TextBlock>
+            </RadioButton>
+            <RadioButton  FontSize="8" Name="rdButtonCorrectAnswer"
+                         Style="{StaticResource radioButtonTest}">
+                <TextBlock FontSize="8"
+                           TextWrapping="Wrap">
+                    Цена деления прибора зависит от количества штрихов на шкале прибора
+                </TextBlock>
+            </RadioButton>
         </StackPanel>
         <StackPanel Grid.Row="2"
                     Grid.Column="1"
@@ -45,8 +59,9 @@
         Grid.Row="2"
         Click="btnReturn_Click"/>
             <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
-        Content="Далее"
+        Content="Завершить"
         Grid.Row="2"
+        Width="200"
         Click="btnNext_Click"/>
         </StackPanel>
     </Grid>

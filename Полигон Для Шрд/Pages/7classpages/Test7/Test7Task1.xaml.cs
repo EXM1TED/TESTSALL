@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Полигон_Для_Шрд.Pages._7classpages.Test5;
 using Полигон_Для_Шрд.Classes;
 namespace Полигон_Для_Шрд.Pages._7classpages.Test7
 {
@@ -30,6 +29,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test7
             result.Result = 0;
             result.UserId = user.UserId;
             result.TestName = "Диффузия";
+            result.TasksCount = 9;
             SaveResult.resultOfTest = result;
         }
 

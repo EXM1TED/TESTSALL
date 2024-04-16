@@ -31,19 +31,19 @@
             <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center">
                 <StackPanel Orientation="Vertical" Margin="0 0 50 0">
-                    <CheckBox Name="checkBoxOb" Content="Объём"
-                          Style="{StaticResource CheckBoxTest}"/>
+                    <CheckBox Name="checkBoxVolunme" 
+                              Content="Объём"
+                              Style="{StaticResource CheckBoxTest}"/>
                     <CheckBox Content="Метр"
-                          Name="checkBoxElectricity"
-                          Style="{StaticResource CheckBoxTest}"/>
+                              Style="{StaticResource CheckBoxTest}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <CheckBox Content="Масса"
-                          Name="checkBoxMass"
+                          Name="checkBoxWeight"
                           Style="{StaticResource CheckBoxTest}">
                     </CheckBox>
                     <CheckBox Content="Длина"
-                          Name="checkBoxMagnetic"
+                          Name="checkBoxLength"
                           Style="{StaticResource CheckBoxTest}"/>
                 </StackPanel>
             </StackPanel>

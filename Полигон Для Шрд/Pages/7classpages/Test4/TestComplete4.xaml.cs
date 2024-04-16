@@ -43,7 +43,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test4
                 Uri uriImgaeBad = new Uri("/Images/ImagesTestCompleteBad.png", UriKind.RelativeOrAbsolute);
                 ImageResult.Source = new BitmapImage(uriImgaeBad);
             }
-            else
+            else if(saveResultForImage >= 5)
             {
                 Uri uriImgaeGood = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
                 ImageResult.Source = new BitmapImage(uriImgaeGood);
