@@ -48,11 +48,13 @@
                         Orientation="Vertical">
                 <Label Name="label" Content="Пройденные тесты:"
                        FontSize="28"/>
-                <ListBox   Name="lstBoxOfCompleTest"
+                <ScrollViewer Name="ScrollViewerOfCompletedTests"
                            Height="350"
-                           FontSize="20"
-                           Padding="20 0 0 0">
-                </ListBox>
+                           FontSize="20">
+                    <StackPanel Name="StackPanelForCompletedTests">
+                        
+                    </StackPanel>
+                </ScrollViewer>
             </StackPanel>
         </StackPanel>
     </Grid>

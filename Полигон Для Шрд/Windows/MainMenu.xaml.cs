@@ -47,7 +47,9 @@ namespace Полигон_Для_Шрд.Windows
                 }
                 txtBlockResult.Text = $"{test.TestName}.\nРезультат: {test.Result} из {test.TasksCount}";
                 txtBlockResult.TextWrapping = TextWrapping.Wrap;
-                lstBoxOfCompleTest.Items.Add(txtBlockResult);
+                txtBlockResult.Margin = new Thickness(5);
+                StackPanelForCompletedTests.Children.Add(txtBlockResult);
+                ScrollViewerOfCompletedTests.Content = StackPanelForCompletedTests;
             }
 
         }
