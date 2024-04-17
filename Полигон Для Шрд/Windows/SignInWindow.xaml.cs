@@ -64,5 +64,11 @@ namespace Полигон_Для_Шрд.Windows
             mainWindow.Show();
             this.Close();
         }
+
+        private void hpLinkChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePasswordWindow changePasswordWindow = new ChangePasswordWindow();
+            changePasswordWindow.Show();
+        }
     }
 }

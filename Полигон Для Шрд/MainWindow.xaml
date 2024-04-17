@@ -58,12 +58,12 @@
         <StackPanel Grid.Row="4" Orientation="Vertical" VerticalAlignment="Center"
                  HorizontalAlignment="Center">
             <Button  
-     Name="btnRegestration"
-     Width="125"
-     Height="30"
-     Content="Регистрация"
-     Click="btnRegestration_Click"
-     FontSize="20"/>
+                Name="btnRegestration"
+                Width="125"
+                Height="30"
+                Content="Регистрация"
+                Click="btnRegestration_Click"
+                FontSize="20"/>
             <TextBlock TextAlignment="Center">
          <Hyperlink Name="signIn" Click="signIn_Click">Войти</Hyperlink>
             </TextBlock>

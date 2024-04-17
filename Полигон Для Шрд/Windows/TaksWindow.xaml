@@ -5,18 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="TaksWindow" Height="800" Width="1600"
+        Title="Тесты" Height="800" Width="1600"
         MinWidth="1200" MinHeight="600" MaxHeight="900" MaxWidth="1700">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="1.2*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" HorizontalAlignment="Left"
             VerticalAlignment="Center"
             Orientation="Horizontal">
-            <TextBlock Text="Logo" Margin="10 0 0 0"
-               FontSize="64"/>
+            <Image Source="\Images\Logo.png"
+                   Width="250"
+                   Height="200"
+                   VerticalAlignment="Center"/>
             <Button Name="btnReturnTaskWindowToMainWindow" 
             Content="Назад" Width="200" Margin="100 0 0 0"
             Style="{StaticResource RoundButtonTemplate}"

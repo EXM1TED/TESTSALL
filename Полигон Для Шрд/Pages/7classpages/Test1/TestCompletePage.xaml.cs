@@ -34,22 +34,31 @@ namespace Полигон_Для_Шрд.Pages
             result = SaveResult.resultOfTest;
             db.ResultsOfTest.Add(result);
             db.SaveChanges();
-            int saveResultForImage = 0;
             var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Основы физики").ToList();
             foreach (var test in results)
             {
+                double saveResultForImage = test.Result % test.TasksCount;
+                if (saveResultForImage == test.TasksCount)
+                {
+                    Uri uriImgaeGood = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
+                    ImageResult.Source = new BitmapImage(uriImgaeGood);
+                }
+                else if (saveResultForImage > 5)
+                {
+                    Uri uriImgaeGood = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
+                    ImageResult.Source = new BitmapImage(uriImgaeGood);
+                }
+                else if (saveResultForImage > 4 && saveResultForImage <= 5)
+                {
+                    Uri uriImgaeGood = new Uri("/Images/TestCompleteNotBad.png", UriKind.RelativeOrAbsolute);
+                    ImageResult.Source = new BitmapImage(uriImgaeGood);
+                }
+                else
+                {
+                    Uri uriImgaeBad = new Uri("/Images/ImagesTestCompleteBad.png", UriKind.RelativeOrAbsolute);
+                    ImageResult.Source = new BitmapImage(uriImgaeBad);
+                }
                 txtBlockResult.Text = $"Ваш результат: {test.Result} из {test.TasksCount}";
-                saveResultForImage = test.Result;
-            }
-            if (saveResultForImage < 5) 
-            {
-                Uri uriImgaeBad = new Uri("/Images/ImagesTestCompleteBad.png", UriKind.RelativeOrAbsolute);
-                ImageResult.Source = new BitmapImage(uriImgaeBad);
-            }
-            else
-            {
-                Uri uriImgaeGood = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
-                ImageResult.Source = new BitmapImage(uriImgaeGood);
             }
         }
 

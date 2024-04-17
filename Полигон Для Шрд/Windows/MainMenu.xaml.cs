@@ -36,14 +36,23 @@ namespace Полигон_Для_Шрд.Windows
             var result = db.ResultsOfTest.Where(u => u.UserId == user.UserId && u.TasksCount > 0).ToList();
             foreach (var test in result)
             {
+                double statusOfResult = test.Result % test.TasksCount;
                 TextBlock txtBlockResult = new TextBlock();
-                if (test.Result < 5)
+                if (test.Result == test.TasksCount)
+                {
+                    txtBlockResult.Foreground = Brushes.Green;
+                }
+                else if (statusOfResult > 5)
+                {
+                    txtBlockResult.Foreground = Brushes.Green;
+                }
+                else if (statusOfResult >= 4 && statusOfResult <= 5)
+                {
+                    txtBlockResult.Foreground = Brushes.Orange;
+                }
+                else if (statusOfResult < 4)
                 {
                     txtBlockResult.Foreground = Brushes.Red;
-                }
-                else if(test.Result >= 5) 
-                {
-                    txtBlockResult.Foreground= Brushes.Green;
                 }
                 txtBlockResult.Text = $"{test.TestName}.\nРезультат: {test.Result} из {test.TasksCount}";
                 txtBlockResult.TextWrapping = TextWrapping.Wrap;
@@ -51,7 +60,6 @@ namespace Полигон_Для_Шрд.Windows
                 StackPanelForCompletedTests.Children.Add(txtBlockResult);
                 ScrollViewerOfCompletedTests.Content = StackPanelForCompletedTests;
             }
-
         }
 
         private void MainMenu_Loaded(object sender, RoutedEventArgs e)

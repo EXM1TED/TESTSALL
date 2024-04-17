@@ -22,7 +22,7 @@
                    Style="{StaticResource TextBlockTestTaskNummber}"/>
         <TextBlock
              Name="textBlockTaskName"
-             Text="Частицы вещества находятся в ... ... движении." 
+             Text="Частицы вещества находятся в _______ и _______ движении." 
              Style="{StaticResource TextBlockTestTask}"/>
         <StackPanel Grid.Row="1"
                         Grid.Column="1"
@@ -31,9 +31,9 @@
             <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center">
                 <StackPanel Orientation="Vertical" Margin="0 0 50 0">
-                    <CheckBox Name="checkBoxMech" Content="периодическом"
+                    <CheckBox Name="checkBoxMech" Content="Периодическом"
                           Style="{StaticResource CheckBoxTest}"/>
-                    <CheckBox Content="хаотическом"
+                    <CheckBox Content="Хаотическом"
                           Name="checkBoxHao"
                           Style="{StaticResource CheckBoxTest}"/>
                 </StackPanel>
@@ -42,7 +42,7 @@
                           Name="checkBoxLight"
                           Style="{StaticResource CheckBoxTest}">
                     </CheckBox>
-                    <CheckBox Content="непрерывном"
+                    <CheckBox Content="Непрерывном"
                           Name="checkBoxNep"
                           Style="{StaticResource CheckBoxTest}"/>
                 </StackPanel>
@@ -50,12 +50,12 @@
         </StackPanel>
         <StackPanel Grid.Row="2"
                     Grid.Column="1"
-            Orientation="Horizontal"
-            HorizontalAlignment="Right">
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
             <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
-        Content="Далее"
-        Grid.Row="2"
-        Click="btnNext_Click"/>
+                        Content="Далее"
+                        Grid.Row="2"
+                        Click="btnNext_Click"/>
         </StackPanel>
     </Grid>
 </Page>

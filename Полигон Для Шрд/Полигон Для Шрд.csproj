@@ -12,6 +12,7 @@
     <None Remove="Images\ImagesTestCompleteBad.png" />
     <None Remove="Images\Logo.png" />
     <None Remove="Images\TestCompleteGood.png" />
+    <None Remove="Images\TestCompleteNotBad.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,7 @@
   <ItemGroup>
     <Resource Include="Images\ImagesTestCompleteBad.png" />
     <Resource Include="Images\Logo.png" />
+    <Resource Include="Images\TestCompleteNotBad.png" />
     <Resource Include="Images\TestCompleteGood.png" />
   </ItemGroup>
 
