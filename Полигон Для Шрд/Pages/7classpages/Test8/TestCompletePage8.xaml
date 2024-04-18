@@ -9,32 +9,6 @@
       Title="TestCompletePage8">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1.5*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0"
-                Orientation="Vertical"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top">
-            <TextBlock Name="txtBlcokTestCompleteLabel"
-                   FontSize="32"
-                   TextAlignment="Center"/>
-            <TextBlock Name="txtBlockResult"
-                   FontSize="30"
-                   TextAlignment="Center"/>
-            <Image Name="ImageResult"
-               Width="400"
-               Height="300"
-               VerticalAlignment="Top"/>
-        </StackPanel>
-        <Button Grid.Row="1"
-            Name="btnGoMainMenu"
-            Style="{StaticResource RoundButtonTemplate}"
-            HorizontalAlignment="Center"
-            Margin="0 0 0 0"
-            Content="На главную"
-            Width="220"
-            Click="btnGoMainMenu_Click"/>
+        
     </Grid>
 </Page>

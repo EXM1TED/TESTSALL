@@ -38,11 +38,11 @@
           </Hyperlink>
         </TextBlock>
         <StackPanel
-            Grid.Row="1"
-            Grid.Column="0"
-            Orientation="Vertical"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top">
+                Grid.Row="1"
+                Grid.Column="0"
+                Orientation="Vertical"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">
             <StackPanel Grid.Row="1"
                         Grid.Column="0"
                         Width="Auto"
@@ -50,11 +50,11 @@
                         Orientation="Vertical">
                 <Label Name="label" Content="Пройденные тесты:"
                        FontSize="28"/>
-                <ScrollViewer Name="ScrollViewerOfCompletedTests"
+                    <ScrollViewer Name="ScrollViewerOfCompletedTests"
                            Height="500"
+                           Width="500"
                            FontSize="20">
-                    <StackPanel Name="StackPanelForCompletedTests">
-                        
+                        <StackPanel Name="StackPanelForCompletedTests">
                     </StackPanel>
                 </ScrollViewer>
             </StackPanel>
