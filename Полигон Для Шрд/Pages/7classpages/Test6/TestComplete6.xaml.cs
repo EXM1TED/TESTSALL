@@ -32,22 +32,12 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test6
             result = SaveResult.resultOfTest;
             db.ResultsOfTest.Add(result);
             db.SaveChanges();
-            int saveResultForImage = 0;
             var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Броуновское движение").ToList();
             foreach (var test in results)
             {
-                txtBlockResult.Text = $"Ваш результат: {test.Result} из 8";
-                saveResultForImage = test.Result;
-            }
-            if (saveResultForImage < 5)
-            {
-                Uri uriImgaeBad = new Uri("/Images/ImagesTestCompleteBad.png", UriKind.RelativeOrAbsolute);
-                ImageResult.Source = new BitmapImage(uriImgaeBad);
-            }
-            else
-            {
-                Uri uriImgaeGood = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
-                ImageResult.Source = new BitmapImage(uriImgaeGood);
+                ImageResult.Source = new BitmapImage(result.StatusOfResult(test.Result, test.TasksCount));
+                txtBlcokTestCompleteLabel.Text = $"Вы завершили тест '{test.TestName}'!";
+                txtBlockResult.Text = $"Ваш результат: {test.Result} из {test.TasksCount}";
             }
         }
 

@@ -36,21 +36,24 @@ namespace Полигон_Для_Шрд.Windows
             var result = db.ResultsOfTest.Where(u => u.UserId == user.UserId && u.TasksCount > 0).ToList();
             foreach (var test in result)
             {
-                double statusOfResult = test.Result % test.TasksCount;
+                double StatusOfResult(int result, int countOfTasks)
+                {
+                    return result / 1.0 / countOfTasks;
+                }
                 TextBlock txtBlockResult = new TextBlock();
                 if (test.Result == test.TasksCount)
                 {
                     txtBlockResult.Foreground = Brushes.Green;
                 }
-                else if (statusOfResult > 5)
+                else if (StatusOfResult(test.Result, test.TasksCount) > 0.5 && StatusOfResult(test.Result, test.TasksCount) <= 0.9)
                 {
                     txtBlockResult.Foreground = Brushes.Green;
                 }
-                else if (statusOfResult >= 4 && statusOfResult <= 5)
+                else if (StatusOfResult(test.Result, test.TasksCount) >= 0.4 && StatusOfResult(test.Result, test.TasksCount) <= 0.5)
                 {
                     txtBlockResult.Foreground = Brushes.Orange;
                 }
-                else if (statusOfResult < 4)
+                else if (StatusOfResult(test.Result, test.TasksCount) < 0.4)
                 {
                     txtBlockResult.Foreground = Brushes.Red;
                 }

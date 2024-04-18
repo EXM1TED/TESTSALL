@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Media.Imaging;
+using System.Windows.Controls;
 
 namespace Полигон_Для_Шрд.Classes
 {
@@ -22,5 +25,37 @@ namespace Полигон_Для_Шрд.Classes
         public int Result { get; set; }
         [Column("Count_of_tasks")]
         public int TasksCount { get; set; }
+
+        /// <summary>
+        /// This method determines the picture for the test result
+        /// </summary>
+        /// <param name="result"></param>
+        /// <param name="countofTasks"></param>
+        /// <returns></returns>
+        public Uri StatusOfResult(int result, int countofTasks)
+        {
+            Uri imageOfResult = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
+            double ComputeResultStatus(int result, int countOfTasks)
+            {
+                return result / 1.0 / countOfTasks;
+            }
+            if (ComputeResultStatus(result, countofTasks) > 0.5 && ComputeResultStatus(result, countofTasks) <= 1)
+            {
+                 imageOfResult = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
+                 return imageOfResult;
+            }
+            else if (ComputeResultStatus(result, countofTasks) >= 0.4 && ComputeResultStatus(result, countofTasks) <= 0.5)
+            {
+                imageOfResult = new Uri("/Images/TestCompleteNotBad.png", UriKind.RelativeOrAbsolute);
+                 return imageOfResult;
+            }
+            else if (ComputeResultStatus(result, countofTasks) < 0.4)
+            {
+                imageOfResult = new Uri("/Images/TestCompleteBad.png", UriKind.RelativeOrAbsolute);
+                return imageOfResult;
+            }
+            return imageOfResult;
+        }
+
     }
 }

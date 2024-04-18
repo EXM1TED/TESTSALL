@@ -5,66 +5,108 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="400">
+        Title="MainWindow" Height="900" Width="600"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition  Height="1.5*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Регистрация"
+        <Image Source="Images/Logo.png"
+               Grid.Row="0"/>
+        <TextBlock Grid.Row="1" 
+                Text="Регистрация"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="24"/>
-        <StackPanel Grid.Row="1"
-                 Orientation="Vertical"
-                 HorizontalAlignment="Center">
-            <TextBlock Text="Логин"
-                    Width="125"
-                    Height="30"
-                    FontSize="20"/>
-            <TextBox
-             Name="loginInput"
-             Width="125"
-             Height="30"/>
+                FontSize="32"/>
+        <StackPanel Grid.Row="2">
         </StackPanel>
-        <StackPanel Grid.Row="2"
-         Orientation="Vertical"
-         HorizontalAlignment="Center">
+        <StackPanel Grid.Row="2"    
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+            <TextBlock Text="Логин"
+                Width="200"
+                Height="30"
+                FontSize="24"
+                HorizontalAlignment="Left"/>
+            <TextBox
+                Name="loginInput"
+                Width="240"
+                Height="30"
+                FontSize="24"/>
             <TextBlock Text="Пароль"
-                    Width="125"
+                    Width="240"
                     Height="30"
-                    FontSize="20"/>
+                    FontSize="24"/>
+            <TextBox
+                Name="passwordInputCheckVisible"
+                Width="240"
+                Height="30"
+                FontSize="24"
+                Visibility="Collapsed"/>
             <PasswordBox
              Name="passwordInput"
-             Width="125"
-             Height="30"/>
+             Width="240"
+             Height="30"
+             FontSize="24"
+                Margin="0 0 0 15"/>
+            <TextBlock Text="Подвирдите пароль:"
+                Width="240"
+                Height="30"
+                FontSize="24"/>
+            <PasswordBox
+                Name="passwordInputCheck"
+                Width="240"
+                Height="30"
+                FontSize="24"/>
+            <CheckBox Name="chkBoxShowPassword"
+                      Content="Показать пароль"
+                      HorizontalAlignment="Right"
+                      FontSize="16"
+                      Padding="0 -4 0 0"
+                      Margin="0 5 0 0"
+                      Checked="chkBoxShowPassword_Checked"
+                      Unchecked="chkBoxShowPassword_Unchecked"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Orientation="Vertical"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Center">
+            <Label Content="В каком классе ты учишься?"
+                   FontSize="22"/>
             <RadioButton Name="rdBtnSevenClass" 
-                      Content="7 класс"
-                      Margin="0 5 0 0"/>
+                      Content="Я учусь в 7 классе"
+                      Margin="0 5 0 0"
+                      FontSize="9"
+                      Style="{StaticResource radioButtonRegistration}"/>
             <RadioButton Name="rdBtnEightClass" 
-                      Content="8 класс"
-                      Margin="0 5 0 0"/>
+                      Content="Я учусь в 8 классе"
+                      Margin="0 5 0 0"
+                      FontSize="9"
+                      Style="{StaticResource radioButtonRegistration}"/>
             <RadioButton Name="rdBtnNineClass" 
-                      Content="9 класс"
-                      Margin="0 5 0 0"/>
+                      Content="Я учусь в 9 классе"
+                      Margin="0 5 0 0"
+                      FontSize="9"
+                      Style="{StaticResource radioButtonRegistration}"/>
         </StackPanel>
-        <StackPanel Grid.Row="4" Orientation="Vertical" VerticalAlignment="Center"
+        <StackPanel Grid.Row="5" Orientation="Vertical" VerticalAlignment="Center"
                  HorizontalAlignment="Center">
             <Button  
                 Name="btnRegestration"
-                Width="125"
-                Height="30"
+                Width="240"
+                Height="50"
+                Margin="0 0 0 0"
                 Content="Регистрация"
                 Click="btnRegestration_Click"
-                FontSize="20"/>
-            <TextBlock TextAlignment="Center">
+                FontSize="32"
+                Style="{StaticResource RoundButtonTemplate}"/>
+            <TextBlock TextAlignment="Center"
+                       FontSize="20">
          <Hyperlink Name="signIn" Click="signIn_Click">Войти</Hyperlink>
             </TextBlock>
         </StackPanel>

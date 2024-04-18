@@ -55,16 +55,16 @@
         </StackPanel>
         <StackPanel Grid.Row="2"
                     Grid.Column="1"
-        Orientation="Horizontal"
-        HorizontalAlignment="Right">
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
             <Button Name="btnReturn" Style="{StaticResource RoundButtonTemplateTest}"
-    Content="Назад"
-    Grid.Row="2"
-    Click="btnReturn_Click" />
+                Content="Назад"
+                Grid.Row="2"
+                Click="btnReturn_Click" />
             <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
-    Content="Далее"
-    Grid.Row="2"
-    Click="btnNext_Click" />
+                Content="Далее"
+                Grid.Row="2"
+                Click="btnNext_Click" />
         </StackPanel>
     </Grid>
 </Page>

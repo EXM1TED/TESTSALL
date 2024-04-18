@@ -17,7 +17,7 @@
                     Orientation="Vertical"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top">
-            <TextBlock Text="Вы завершили тест!"
+            <TextBlock Name="txtBlcokTestCompleteLabel"
                        FontSize="32"
                        TextAlignment="Center"/>
             <TextBlock Name="txtBlockResult"

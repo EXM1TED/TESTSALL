@@ -22,7 +22,7 @@
                    Style="{StaticResource TextBlockTestTaskNummber}"/>
         <TextBlock
              Name="textBlockTaskName"
-             Text="Как звали ученого, который первым применил экспериментальный метод исследования в науке?" FontSize="24"
+             Text="Как звали ученого, который первым применил экспериментальный метод исследования в науке?"
              Style="{StaticResource TextBlockTestTask}"/>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"

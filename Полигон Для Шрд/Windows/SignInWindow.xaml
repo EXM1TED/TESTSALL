@@ -5,40 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="SignInWindow" Height="450" Width="400">
+        Title="Авторизация" Height="570" Width="400"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Вход"
+                   Grid.Row="1"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="24"/>
-        <StackPanel Grid.Row="1"
+        <Image Source="/Images/Logo.png"
+               Grid.Row="0"/>
+        <StackPanel Grid.Row="2"
                     Orientation="Vertical"
                     HorizontalAlignment="Center">
             <TextBlock Text="Логин"
-                       Width="125"
+                       Width="200"
                        Height="30"
                        FontSize="20"/>
             <TextBox
                 Name="loginInput"
-                Width="125"
+                Width="200"
                 Height="30"/>
         </StackPanel>
-        <StackPanel Grid.Row="2"
+        <StackPanel Grid.Row="3"
             Orientation="Vertical"
             HorizontalAlignment="Center">
             <TextBlock Text="Пароль"
-                       Width="125"
+                       Width="200"
                        Height="30"
                        FontSize="20"/>
             <PasswordBox
                 Name="passwordInput"
-                Width="125"
+                Width="200"
                 Height="30"/>
             <TextBlock HorizontalAlignment="Right">
                 <Hyperlink Name="hpLinkChangePassword"
@@ -46,16 +52,23 @@
                     Забыли пароль
                 </Hyperlink>
             </TextBlock>
+            <CheckBox Name="chkBoxRememberMe"
+                HorizontalAlignment="Center"
+                Margin="0 7 0 0">
+                Запомнить меня
+            </CheckBox>
         </StackPanel>
-        <StackPanel Grid.Row="3" Orientation="Vertical" VerticalAlignment="Center"
+        <StackPanel Grid.Row="4" Orientation="Vertical" VerticalAlignment="Center"
                     HorizontalAlignment="Center">
             <Button  
-        Name="btnSignIn"
-        Width="125"
-        Height="30"
-        Content="Войти"
-        Click="btnSignIn_Click"
-        FontSize="20"/>
+                Name="btnSignIn"
+                Width="100"
+                Height="45"
+                Content="Войти"
+                Click="btnSignIn_Click"
+                FontSize="20"
+                Margin="0 0 0 0"
+                Style="{StaticResource RoundButtonTemplate}"/>
             <TextBlock TextAlignment="Center">
             <Hyperlink Name="OpenRegistrationWindow" Click="OpenRegistrationWindow_Click">Регистрация</Hyperlink>
             </TextBlock>

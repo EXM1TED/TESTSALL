@@ -34,19 +34,15 @@ namespace Полигон_Для_Шрд
             db.Database.EnsureCreated();
             string login = loginInput.Text;
             string password = passwordInput.Password;
-            if (loginInput.Text == "" && passwordInput.Password == "")
+            string passwordCheck = passwordInputCheck.Password;
+            if (loginInput.Text == "" || passwordInput.Password == "" || passwordInputCheck.Password == "")
             {
-                MessageBox.Show("Заполните поле: Логнин, Пароль", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Заполните все поля ввода", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (loginInput.Text == "")
+            else if (password != passwordCheck)
             {
-                MessageBox.Show("Заполните поле: Логин", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Пароли не совпадают", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (passwordInput.Password == "")
-            {
-                MessageBox.Show("Заполните поле: Пароль", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
             else if (db.Users.Any(user => user.Login == login))
             {
                 MessageBox.Show("Такой логин уже существует", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -91,6 +87,21 @@ namespace Полигон_Для_Шрд
             SignInWindow signInWindow = new SignInWindow();
             signInWindow.Show();
             this.Close();
+        }
+
+        private void chkBoxShowPassword_Checked(object sender, RoutedEventArgs e)
+        {
+             passwordInputCheckVisible.Visibility = Visibility.Visible;
+             passwordInput.Visibility = Visibility.Collapsed;
+             passwordInputCheckVisible.Text = passwordInput.Password;
+        }
+
+        private void chkBoxShowPassword_Unchecked(object sender, RoutedEventArgs e)
+        {
+            passwordInput.Password = passwordInputCheckVisible.Text;
+            passwordInput.Visibility = Visibility.Visible;
+            passwordInputCheckVisible.Visibility = Visibility.Collapsed;
+            passwordInput.Focus();
         }
     }
 }

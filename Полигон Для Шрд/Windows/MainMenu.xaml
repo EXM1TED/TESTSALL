@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="Главное меню. С чего начнём?" Height="800" Width="1600">
+        Title="Главное меню. С чего начнём?" Height="800" Width="1600"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -49,7 +51,7 @@
                 <Label Name="label" Content="Пройденные тесты:"
                        FontSize="28"/>
                 <ScrollViewer Name="ScrollViewerOfCompletedTests"
-                           Height="350"
+                           Height="500"
                            FontSize="20">
                     <StackPanel Name="StackPanelForCompletedTests">
                         

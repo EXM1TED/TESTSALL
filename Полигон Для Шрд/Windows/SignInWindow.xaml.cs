@@ -33,7 +33,8 @@ namespace Полигон_Для_Шрд.Windows
             string password = passwordInput.Password;
             ApplicationContext db = new ApplicationContext();
             db.Database.EnsureCreated();
-            var checkUser = db.Users.FromSqlRaw($"SELECT Id, Login, Password, Class FROM Users WHERE Login = '{login}' and Password = '{password}'").ToList();
+            var checkUser = db.Users.FromSqlRaw($"SELECT Id, Login, Password, Class FROM Users " +
+                $"WHERE Login = '{login}' and Password = '{password}'").ToList();
             if (checkUser.Count == 1)
             {
                 User user = new User();

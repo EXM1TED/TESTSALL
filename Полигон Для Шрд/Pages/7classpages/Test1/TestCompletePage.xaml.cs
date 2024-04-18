@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿    using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -37,27 +37,8 @@ namespace Полигон_Для_Шрд.Pages
             var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Основы физики").ToList();
             foreach (var test in results)
             {
-                double saveResultForImage = test.Result % test.TasksCount;
-                if (saveResultForImage == test.TasksCount)
-                {
-                    Uri uriImgaeGood = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
-                    ImageResult.Source = new BitmapImage(uriImgaeGood);
-                }
-                else if (saveResultForImage > 5)
-                {
-                    Uri uriImgaeGood = new Uri("/Images/TestCompleteGood.png", UriKind.RelativeOrAbsolute);
-                    ImageResult.Source = new BitmapImage(uriImgaeGood);
-                }
-                else if (saveResultForImage > 4 && saveResultForImage <= 5)
-                {
-                    Uri uriImgaeGood = new Uri("/Images/TestCompleteNotBad.png", UriKind.RelativeOrAbsolute);
-                    ImageResult.Source = new BitmapImage(uriImgaeGood);
-                }
-                else
-                {
-                    Uri uriImgaeBad = new Uri("/Images/ImagesTestCompleteBad.png", UriKind.RelativeOrAbsolute);
-                    ImageResult.Source = new BitmapImage(uriImgaeBad);
-                }
+                ImageResult.Source = new BitmapImage(result.StatusOfResult(test.Result, test.TasksCount));
+                txtBlcokTestCompleteLabel.Text = $"Вы завершили тест '{test.TestName}'!";
                 txtBlockResult.Text = $"Ваш результат: {test.Result} из {test.TasksCount}";
             }
         }
