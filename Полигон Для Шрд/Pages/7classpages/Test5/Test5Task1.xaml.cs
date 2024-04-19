@@ -30,7 +30,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test5
             ResultOfTest result = new ResultOfTest();
             result.Result = 0;
             result.UserId = user.UserId;
-            result.TestName = "Строение вещества и Изменение объёма при нагревании";
+            result.TestName = "Строение вещества и изменение объёма при нагревании";
             result.TasksCount = 9;
             SaveResult.resultOfTest = result;
         }

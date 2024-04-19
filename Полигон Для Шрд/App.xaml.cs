@@ -19,6 +19,7 @@ namespace Полигон_Для_Шрд
         {
             this.ShutdownMode = ShutdownMode.OnLastWindowClose;
             ApplicationContext db = new ApplicationContext();
+            db.Database.EnsureCreated();
             bool checkUsers = db.Users.Any(u => u.UserId == 1);
             if (checkUsers)
             {

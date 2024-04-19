@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="Тесты" Height="800" Width="1600"
-        MinWidth="1200" MinHeight="600" MaxHeight="900" MaxWidth="1700">
+        Title="Тесты. Так много вопросов, и так мало ответов..." Height="800" Width="1600"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Images/TaskWindowIcon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.2*"/>

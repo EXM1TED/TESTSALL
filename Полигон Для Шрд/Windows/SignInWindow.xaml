@@ -5,15 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="Авторизация" Height="570" Width="400"
+        Title="Авторизация" Height="580" Width="400"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1.6*"/>
             <RowDefinition Height="0.5*"/>
-            <RowDefinition/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Вход"
@@ -33,28 +32,26 @@
             <TextBox
                 Name="loginInput"
                 Width="200"
-                Height="30"/>
-        </StackPanel>
-        <StackPanel Grid.Row="3"
-            Orientation="Vertical"
-            HorizontalAlignment="Center">
+                Height="30"
+                Margin="0 0 0 15"/>
             <TextBlock Text="Пароль"
-                       Width="200"
-                       Height="30"
-                       FontSize="20"/>
+                Width="200"
+                Height="30"
+                FontSize="20"/>
             <PasswordBox
                 Name="passwordInput"
                 Width="200"
                 Height="30"/>
-            <TextBlock HorizontalAlignment="Right">
-                <Hyperlink Name="hpLinkChangePassword"
-                    Click="hpLinkChangePassword_Click">
-                    Забыли пароль
-                </Hyperlink>
+            <TextBlock HorizontalAlignment="Right"
+                       FontSize="16">
+        <Hyperlink Name="hpLinkChangePassword"
+            Click="hpLinkChangePassword_Click">
+                Забыли пароль
+        </Hyperlink>
             </TextBlock>
             <CheckBox Name="chkBoxRememberMe"
-                HorizontalAlignment="Center"
-                Margin="0 7 0 0">
+                      HorizontalAlignment="Center"
+                      Margin="0 7 0 0">
                 Запомнить меня
             </CheckBox>
         </StackPanel>
@@ -62,15 +59,19 @@
                     HorizontalAlignment="Center">
             <Button  
                 Name="btnSignIn"
-                Width="100"
-                Height="45"
+                Width="150"
+                Height="50"
                 Content="Войти"
                 Click="btnSignIn_Click"
                 FontSize="20"
                 Margin="0 0 0 0"
                 Style="{StaticResource RoundButtonTemplate}"/>
             <TextBlock TextAlignment="Center">
-            <Hyperlink Name="OpenRegistrationWindow" Click="OpenRegistrationWindow_Click">Регистрация</Hyperlink>
+                <Hyperlink Name="OpenRegistrationWindow" 
+                           Click="OpenRegistrationWindow_Click"
+                           FontSize="20">
+                    Регистрация
+                </Hyperlink>
             </TextBlock>
         </StackPanel>
     </Grid>

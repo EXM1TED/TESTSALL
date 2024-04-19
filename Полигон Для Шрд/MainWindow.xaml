@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="600"
+        Title="Регистрация" Height="900" Width="600"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -38,7 +38,8 @@
                 Name="loginInput"
                 Width="240"
                 Height="30"
-                FontSize="24"/>
+                FontSize="24"
+                Margin="0 0 0 15"/>
             <TextBlock Text="Пароль"
                     Width="240"
                     Height="30"
@@ -48,13 +49,14 @@
                 Width="240"
                 Height="30"
                 FontSize="24"
-                Visibility="Collapsed"/>
+                Visibility="Collapsed"
+                Margin="0 0 0 15"/>
             <PasswordBox
              Name="passwordInput"
              Width="240"
              Height="30"
              FontSize="24"
-                Margin="0 0 0 15"/>
+             Margin="0 0 0 15"/>
             <TextBlock Text="Подвирдите пароль:"
                 Width="240"
                 Height="30"

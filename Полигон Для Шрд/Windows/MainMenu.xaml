@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Главное меню. С чего начнём?" Height="800" Width="1600"
         ResizeMode="CanMinimize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Icon="/Images/Logo-icon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

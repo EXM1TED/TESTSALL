@@ -45,11 +45,11 @@ namespace Полигон_Для_Шрд.Windows
                 {
                     txtBlockResult.Foreground = Brushes.Green;
                 }
-                else if (StatusOfResult(test.Result, test.TasksCount) > 0.5 && StatusOfResult(test.Result, test.TasksCount) <= 0.9)
+                else if (StatusOfResult(test.Result, test.TasksCount) > 0.6 && StatusOfResult(test.Result, test.TasksCount) <= 0.9)
                 {
                     txtBlockResult.Foreground = Brushes.Green;
                 }
-                else if (StatusOfResult(test.Result, test.TasksCount) >= 0.4 && StatusOfResult(test.Result, test.TasksCount) <= 0.5)
+                else if (StatusOfResult(test.Result, test.TasksCount) >= 0.4 && StatusOfResult(test.Result, test.TasksCount) <= 0.6)
                 {
                     txtBlockResult.Foreground = Brushes.Orange;
                 }

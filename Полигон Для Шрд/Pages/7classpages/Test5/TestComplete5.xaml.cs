@@ -31,7 +31,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test5
             result = SaveResult.resultOfTest;
             db.ResultsOfTest.Add(result);
             db.SaveChanges();
-            var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Строение вещества и Изменение объёма при нагревании").ToList();
+            var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Строение вещества и изменение объёма при нагревании").ToList();
             foreach (var test in results)
             {
                 ImageResult.Source = new BitmapImage(result.StatusOfResult(test.Result, test.TasksCount));

@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Logo-icon.ico" />
     <None Remove="Images\Logo.png" />
+    <None Remove="Images\TaskWindowIcon.ico" />
     <None Remove="Images\TestCompleteBad.png" />
     <None Remove="Images\TestCompleteGood.png" />
     <None Remove="Images\TestCompleteNotBad.png" />
@@ -26,6 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Logo-icon.ico" />
+    <Resource Include="Images\TaskWindowIcon.ico" />
     <Resource Include="Images\TestCompleteBad.png" />
     <Resource Include="Images\Logo.png" />
     <Resource Include="Images\TestCompleteNotBad.png" />
