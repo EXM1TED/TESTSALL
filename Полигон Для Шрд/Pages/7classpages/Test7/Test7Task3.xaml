@@ -21,14 +21,14 @@
         <TextBlock Text="Задание №3"
             Style="{StaticResource TextBlockTestTaskNummber}"/>
         <TextBlock
-      Name="textBlockTaskName"
-      Text="Молекулы притягиваются друг к другу, но между ними сохраняются расстояния. Это происходит, потому что..." FontSize="24"
-      Style="{StaticResource TextBlockTestTask}"/>
+            Name="textBlockTaskName"
+            Text="Молекулы притягиваются друг к другу, но между ними сохраняются расстояния. Это происходит, потому что..." FontSize="24"
+            Style="{StaticResource TextBlockTestTask}"/>
         <StackPanel Grid.Row="1"
              Grid.Column="1"
-          Orientation="Vertical"
-          VerticalAlignment="Center"
-          HorizontalAlignment="Center">
+                Orientation="Vertical"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
             <RadioButton Content="молекулы непрерывно движутся"
                   Style="{StaticResource radioButtonTest}"/>
             <RadioButton Content="между молекулами существуют неровности"
@@ -37,17 +37,17 @@
                   Style="{StaticResource radioButtonTest}"/>
         </StackPanel>
         <StackPanel Grid.Row="2"
-             Grid.Column="1"
-     Orientation="Horizontal"
-     HorizontalAlignment="Right">
+                Grid.Column="1"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
             <Button Name="btnReturn" Style="{StaticResource RoundButtonTemplateTest}"
- Content="Назад"
- Grid.Row="2"
- Click="btnReturn_Click"/>
+                Content="Назад"
+                Grid.Row="2"
+                Click="btnReturn_Click"/>
             <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
- Content="Далее"
- Grid.Row="2"
- Click="btnNext_Click"/>
+                Content="Далее"
+                Grid.Row="2"
+                Click="btnNext_Click"/>
         </StackPanel>
     </Grid>
 </Page>

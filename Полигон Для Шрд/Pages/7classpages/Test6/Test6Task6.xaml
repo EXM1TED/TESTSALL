@@ -21,14 +21,14 @@
         <TextBlock Text="Задание №6"
            Style="{StaticResource TextBlockTestTaskNummber}"/>
         <TextBlock
-     Name="textBlockTaskName"
-     Text="Зависит ли броуновское движение от освещения и внешнего электромагнитного поля?" FontSize="26"
-     Style="{StaticResource TextBlockTestTask}"/>
+            Name="textBlockTaskName"
+            Text="Зависит ли броуновское движение от освещения и внешнего электромагнитного поля?" FontSize="26"
+            Style="{StaticResource TextBlockTestTask}"/>
         <StackPanel Grid.Row="1"
             Grid.Column="1"
-         Orientation="Vertical"
-         VerticalAlignment="Center"
-         HorizontalAlignment="Center">
+                Orientation="Vertical"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
             <RadioButton Content="зависит от освещения и электромагнитного поля"
                  Style="{StaticResource radioButtonTest}"/>
             <RadioButton Content="не зависит от освещения и электромагнитного поля " Name="rdButtonCorrectAnswer"
@@ -37,17 +37,17 @@
                  Style="{StaticResource radioButtonTest}"/>
         </StackPanel>
         <StackPanel Grid.Row="2"
-            Grid.Column="1"
-    Orientation="Horizontal"
-    HorizontalAlignment="Right">
+                Grid.Column="1"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
             <Button Name="btnReturn" Style="{StaticResource RoundButtonTemplateTest}"
-Content="Назад"
-Grid.Row="2"
-Click="btnReturn_Click"/>
+                Content="Назад"
+                Grid.Row="2"
+                Click="btnReturn_Click"/>
             <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
-Content="Далее"
-Grid.Row="2"
-Click="btnNext_Click"/>
+                Content="Далее"
+                Grid.Row="2"
+                Click="btnNext_Click"/>
         </StackPanel>
     </Grid>
 </Page>

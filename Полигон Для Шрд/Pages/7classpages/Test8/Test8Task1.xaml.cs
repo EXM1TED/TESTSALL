@@ -30,7 +30,7 @@ namespace Полигон_Для_Шрд.Pages.Test8
             ResultOfTest result = new ResultOfTest();
             result.Result = 0;
             result.UserId = user.UserId;
-            result.TestName = "Притяжение и отталкивание молекул ";
+            result.TestName = "Притяжение и отталкивание молекул";
             result.TasksCount = 6;
             SaveResult.resultOfTest = result;
         }

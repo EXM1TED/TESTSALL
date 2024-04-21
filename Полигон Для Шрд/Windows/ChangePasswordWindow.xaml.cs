@@ -72,15 +72,21 @@ namespace Полигон_Для_Шрд.Windows
 
         private void chkBoxShowPassword_Checked(object sender, RoutedEventArgs e)
         {
-            passwordInputCheckVisible.Visibility = Visibility.Visible;
+            passwordInputVisible.Visibility = Visibility.Visible;
             passwordInput.Visibility = Visibility.Collapsed;
-            passwordInputCheckVisible.Text = passwordInput.Password;
+            passwordInputCheck.Visibility = Visibility.Collapsed;
+            passwordInputCheckVisible.Visibility = Visibility.Visible;
+            passwordInputVisible.Text = passwordInput.Password;
+            passwordInputCheckVisible.Text = passwordInputCheck.Password;
         }
 
         private void chkBoxShowPassword_Unchecked(object sender, RoutedEventArgs e)
         {
-            passwordInput.Password = passwordInputCheckVisible.Text;
+            passwordInput.Password = passwordInputVisible.Text;
+            passwordInputCheck.Password = passwordInputCheckVisible.Text;
             passwordInput.Visibility = Visibility.Visible;
+            passwordInputVisible.Visibility = Visibility.Collapsed;
+            passwordInputCheck.Visibility = Visibility.Visible;
             passwordInputCheckVisible.Visibility = Visibility.Collapsed;
             passwordInput.Focus();
         }

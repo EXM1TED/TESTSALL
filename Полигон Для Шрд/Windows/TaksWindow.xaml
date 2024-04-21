@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="Тесты. Так много вопросов, и так мало ответов..." Height="800" Width="1600"
+        Title="Тесты. Так много вопросов, и так мало ответов..." 
+        Height="800" Width="1600"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
         Icon="/Images/TaskWindowIcon.ico">
@@ -22,22 +23,22 @@
                    Height="200"
                    VerticalAlignment="Center"/>
             <Button Name="btnReturnTaskWindowToMainWindow" 
-            Content="Назад" Width="200" Margin="100 0 0 0"
-            Style="{StaticResource RoundButtonTemplate}"
-            FontSize="36" Click="btnReturnTaskWindowToMainWindow_Click"/>
+                Content="Назад" Width="200" Margin="100 0 0 0"
+                Style="{StaticResource RoundButtonTemplate}"
+                FontSize="36" Click="btnReturnTaskWindowToMainWindow_Click"/>
             <Button Content="Уроки" Margin="100 0 0 0"
-            Style="{StaticResource RoundButtonTemplate}"
-            Width="200"
-            FontSize="36"/>
+                Style="{StaticResource RoundButtonTemplate}"
+                Width="200"
+                FontSize="36"/>
         </StackPanel>
         <TextBlock Grid.Row="0" Grid.Column="1"
            HorizontalAlignment="Right"
            VerticalAlignment="Center"
                    Margin="0 0 50 0">
-         <Hyperlink Name="NavigateToProfile" Click="NavigateToProfile_Click">
-        <TextBlock Text="{Binding Path=Login}"
-            FontSize="24" HorizontalAlignment="Right"/>
-            </Hyperlink>
+        <Hyperlink Name="NavigateToProfile" Click="NavigateToProfile_Click">
+            <TextBlock Text="{Binding Path=Login}"
+                FontSize="24" HorizontalAlignment="Right"/>
+        </Hyperlink>
         </TextBlock>
         <Frame
                NavigationUIVisibility="Hidden"

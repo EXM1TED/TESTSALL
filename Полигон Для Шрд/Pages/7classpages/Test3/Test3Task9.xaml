@@ -45,7 +45,8 @@
         Grid.Row="2"
         Click="btnReturn_Click"/>
             <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
-        Content="Далее"
+        Content="Завершить"
+        Width="200"
         Grid.Row="2"
         Click="btnNext_Click"/>
         </StackPanel>

@@ -81,7 +81,8 @@ namespace Полигон_Для_Шрд.Windows
 
         private void NavigateToProfile_Click(object sender, RoutedEventArgs e)
         {
-
+            ProfileWindow profileWindow = new ProfileWindow();
+            profileWindow.Show();
         }
     }
 }
