@@ -30,13 +30,25 @@ namespace Полигон_Для_Шрд.Windows
 
         private void btnSignOut_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
 
         private void ChangePassword_Click(object sender, RoutedEventArgs e)
         {
             ChangePasswordWindow changePasswordWindow = new ChangePasswordWindow();
             changePasswordWindow.Show();
+        }
+
+        private void btnLoginChange_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeLoginWindow changeLoginWindow = new ChangeLoginWindow();
+            changeLoginWindow.Show();
+        }
+
+        private void btnChangeClass_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeClassWindow changeClassWindow = new ChangeClassWindow();
+            changeClassWindow.Show();
         }
     }
 }

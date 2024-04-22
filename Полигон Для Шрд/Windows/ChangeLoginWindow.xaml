@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="ChangeLoginWindow" Height="350" Width="300"
+        Title="Смена логина" Height="350" Width="300"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
     <Grid>
