@@ -39,7 +39,7 @@ namespace Полигон_Для_Шрд.Windows
             changePasswordWindow.Show();
         }
 
-        private void btnLoginChange_Click(object sender, RoutedEventArgs e)
+        private void btnChangeLogin_Click(object sender, RoutedEventArgs e)
         {
             ChangeLoginWindow changeLoginWindow = new ChangeLoginWindow();
             changeLoginWindow.Show();

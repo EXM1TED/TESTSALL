@@ -30,7 +30,8 @@
                            Width="Auto"/>
                 <Button Name="btnLoginChange"
                     Content="Изменить"
-                    Style="{StaticResource ButtonInProfile}"/>
+                    Style="{StaticResource ButtonInProfile}"
+                    Click="btnLoginChange_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal"
             HorizontalAlignment="Center">
@@ -39,9 +40,10 @@
                 <TextBlock Text="{Binding Path=Class}"
                            Style="{StaticResource TextBlockProfile}"
                            Width="Auto"/>
-                <Button
+                <Button Name="btnChangeClass"
                     Content="Изменить"
-                    Style="{StaticResource ButtonInProfile}"/>
+                    Style="{StaticResource ButtonInProfile}"
+                    Click="btnChangeClass_Click"/>
             </StackPanel>
             <TextBlock HorizontalAlignment="Center"
                        Margin="0 40 0 0">
