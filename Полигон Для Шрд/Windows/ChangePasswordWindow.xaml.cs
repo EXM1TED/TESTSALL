@@ -34,7 +34,10 @@ namespace Полигон_Для_Шрд.Windows
             var users = db.Users.Where(u => u.Login == login).ToList();
             if (login == string.Empty)
             {
-                    MessageBox.Show("Заполните поле: Логни", "Ошибка смена пароля", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Заполните поле: Логни", 
+                        "Ошибка смена пароля", 
+                        MessageBoxButton.OK, 
+                        MessageBoxImage.Error);
             }
             else
             {

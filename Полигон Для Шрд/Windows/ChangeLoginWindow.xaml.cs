@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Полигон_Для_Шрд.Classes;
 
 namespace Полигон_Для_Шрд.Windows
 {
@@ -22,6 +23,37 @@ namespace Полигон_Для_Шрд.Windows
         public ChangeLoginWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnConfirmChanges_Click(object sender, RoutedEventArgs e)
+        {
+            User user = new User();
+            user = UserSave.userSave;
+            ApplicationContext db = new ApplicationContext();
+            string newLogin = loginInput.Text;
+            user.Login = newLogin;
+            var checkNewLogin = db.Users.Where(u => u.Login == newLogin).ToList();
+            if (checkNewLogin.Count == 1)
+            {
+                MessageBox.Show("Такой логин уже существует", 
+                    "Ошибка по смене логина", 
+                    MessageBoxButton.OK, 
+                    MessageBoxImage.Error);
+            }
+            else
+            {
+                user.Login = newLogin;
+                db.Users.Update(user);
+                db.SaveChanges();
+                var restartApplication = MessageBox.Show("Логин успешно изменен\nНеобходимо перезапустить приложение",
+                    "Смена логина",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+                if (restartApplication == MessageBoxResult.OK)
+                {
+                    Application.Current.Shutdown();
+                }
+            }
         }
     }
 }
